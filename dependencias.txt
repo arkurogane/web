@@ -1,6 +1,6 @@
 descargar composer.phar
 
-instalart composer.phar
+instalar composer.phar
 
 ir a la ruta donde esta la carpeta del proyecto por medio de un cmd
 ejecutar comando:
