@@ -1,0 +1,51 @@
+{% extends "layout.twig" %}
+
+{% block css %}
+    <link rel="stylesheet" type="text/css" href="../../../css/bootstrap2.css">
+{% endblock %}
+
+{% block content %}
+    <div class="flex-center position-ref full-height">
+        {% if result %}
+            <div class="alert alert-success">Alumno Cargado!</div>
+        {% endif %}
+        <div class="container col-md-10 ">
+            <form method="post">
+                <section class="container">
+                    <div class="row col-md-12">
+                        <div class="col-md-6">
+                            <label for="curso">Curso</label>
+                            <select name="curso" id="curso" class="form-control" required>
+                                <option value="">Seleccione un curso</option>
+                                {% for curso in curso %}
+                                    <option name="curso" id="{{ curso.id }}" value="{{ curso.id }}">{{ curso.nombre }}</option>
+                                {% endfor %}
+                            </select>
+                            <label for="run">RUN Alumno</label>
+                            <input type="text" name="run" class="form-control" id="run" required>
+                            <label for="nombre">Nombre</label>
+                            <input type="text" name="nombre" class="form-control" id="nombre" required>
+                            <br>
+                        </div>
+                        <div class="col-md-6">
+                            <label for="imagen">seleccione imagen</label>
+                            <input type="file" name="imagen" class="form-control" id="imagen" required >
+                           <!-- <img src="<input type='file' name='imagen' class='form-control' id='imagen'>">-->
+                            
+                            <br>
+                        </div>
+                    </div>
+                <div class="row col-md-12">
+                    <div class="col-md-4"></div>
+                    <div class="col-md-4">
+                        <br>
+                        <button class="btn btn-primary btn-block" id="cargar">Cargar</button>
+                    </div>
+                    <div class="col-md-4"></div>
+                </div>
+                <br>
+                </section>
+            </form>
+        </div>
+    </div>
+{% endblock %}

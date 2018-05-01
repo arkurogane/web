@@ -1,0 +1,21 @@
+descargar composer.phar
+
+instalart composer.phar
+
+ir a la ruta donde esta la carpeta del proyecto por medio de un cmd
+ejecutar comando:
+
+php composer.phar install
+
+despues de eso instalar las siguientes dependencias por medio del cmd
+
+
+php composer.phar require phroute/phroute
+
+php composer.phar require twig/twig
+
+php composer.phar require illuminate/database
+
+php composer.phar require vlucas/phpdotenv
+
+php composer.phar require siriusphp/validation
