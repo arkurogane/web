@@ -1,18 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <link rel="icon" type="image/x-icon" href="https://virginiogomez.cl//templates/yoo_glass/favicon.ico" />
     <meta charset="UTF-8">
+    <link rel="icon" type="image/png" href="../../imagenes/icon.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/css/bootstrap.min.css" integrity="sha384-Zug+QiDoJOrZ5t4lssLdxGhVrurbmBWopoEl+M6BdEfwnCJZtKxi1KgxUyJq13dy" crossorigin="anonymous">
-    -->
     <link rel="stylesheet" href="../../css/bootstrap2.css" integrity="sha384-Zug+QiDoJOrZ5t4lssLdxGhVrurbmBWopoEl+M6BdEfwnCJZtKxi1KgxUyJq13dy" crossorigin="anonymous">
-    
     <title>Conciencia Fonologica</title>
     <script src="../../jss/jquery.js"></script>
-    <!--<script src="../../jss/bootstrap.min.js"></script>-->
-    <!--<link rel="stylesheet" type="text/css" href="../../css/bootstrap.min.css">-->
-    <!--<link rel="stylesheet" type="text/css" href="../../../css/bootstrap.css">-->
     <link rel="stylesheet" type="text/css" href="../../../css/bootstrap2.css">
     <style>
         nav div ul li a{
@@ -65,12 +59,17 @@
 </head>
 <body>
     <nav class="navbar navbar-expand-lg navbar-dark">
-        <a class="navbar-brand" href="index"><img src="https://virginiogomez.cl//images/logo.jpg" class="img-fluid" alt="Responsive image"></a>
+        {% block imgnav %}
+        <img src="../imagenes/cf.png" class="img-fluid" alt="Responsive image">
+        {% endblock %}
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarNavDropdown">
             <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ 'admin/index' | url }}">Inicio</a>
+                </li>
                 <li class="nav-item">
                     <a class="nav-link" href="{{ 'admin/docente/datos' | url }}">Mis Datos</a>
                 </li>
