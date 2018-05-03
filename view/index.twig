@@ -13,12 +13,29 @@
 	body{
 		background-color:#989BA9;
 	}
+	.col{
+		background-color:#385a8a;
+		border-radius:3em;
+		height:3em;}
+	 b>a{
+		color:#fff;
+	}
+	b>a:Hover{
+		color:#ff00ff;
+	}
+	footer{
+		background-color:#385a8a;
+		border-radius:3em 0em;
+	}
+	.imb{
+		border-radius:1em;
+	}
 	
 	</style>
 </head>
 <body>
 	<nav class="navbar navbar-default" role="navigation">
-<div class="container">
+<div class="container col">
   <div class="navbar-header lf">
     <b><a class="navbar-brand" href="{{ 'auth/login' | url }}">Login</a></b>
   </div>
@@ -30,11 +47,9 @@
 
     		<div class="carousel-inner" role="listbox">
     			<div class="item active mg">
-				
-					<img src="../imagenes/32.jpeg" class="img-responsive" alt="">
+					<img src="../imagenes/32.jpeg" class="img-responsive imb" alt="">
     				<div class="carousel-caption hidden-xs hidden-sm">
     					<h3>Aqui sirve para poner un mensaje!</h3>
-    					<p>Puede servir para poner un mensaje adicional!</p>
     				</div>
                 </div>
     		</div>
@@ -43,7 +58,7 @@
 </div>
 </header>
 <div class="container">
-	<section class="main row">
+	<section class="main row imb">
 		<article class="col-xs-12 col-sm-12 col-md-12">
 
 			<div role="tabpanel">
@@ -77,8 +92,8 @@
 		</article>
 	</section>
 	<div class="row">
-		<div class="color1 col-xs-12 col-sm-6 col-md-4">
-			<h3>Columna</h3>
+		<div class="color1 col-xs-12 col-sm-6 col-md-4 imb">
+			<h3>Información</h3>
 			<p>
 				Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
 				tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
@@ -86,15 +101,15 @@
 			</p>
 		</div>
 		<div class="col-xs-12 col-sm-6 col-md-4">
-			<h3>Columna</h3>
+			<h3>Información</h3>
 			<p>
 				Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
 				tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
 				quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo 
 			</p>
 		</div>
-		<div class="color1 col-xs-12 col-sm-6 col-md-4">
-			<h3>Columna</h3>
+		<div class="color1 col-xs-12 col-sm-6 col-md-4 imb">
+			<h3>Información</h3>
 			<p>
 				Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
 				tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
@@ -105,7 +120,7 @@
 </div>
 <footer>
 	<div class="container footer">
-		<h3>Virginio Gomez</h3>
+		<h3>Redes Sociales</h3>
 	</div>
 </footer>
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
