@@ -81,7 +81,8 @@
     <style>
         .btn-success {
             border-radius: 5em;
-            margin-right: 1em;
+            margin-right: 2em;
+            margin-left: 1em;
         }
         section{
             border-radius: 2em;
@@ -111,7 +112,7 @@
                 <a class="nav-link btn btn-success btn-block" href="{{ 'user/academico/lista' | url }}">Selección Alumnos</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link btn btn-success btn-block" href="{{ 'user/actividad/actividad' | url }}">Actividades</a>
+                <a class="nav-link btn btn-success btn-block" target="_blank" onclick="FullScreen(window.open({{ 'user/actividad/actividad' | url }}, this.target, 'fullscreen=yes, scrollbars=auto')); return false;" href="{{ 'user/actividad/actividad' | url }}">Actividades</a>
             </li>
             <li class="nav-item "><a class="nav-link btn btn-success btn-block" href="{{ 'auth/logout' | url }}">Cerrar Sesion</a></li>
         </ul>
