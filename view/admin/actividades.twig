@@ -1,31 +1,42 @@
 {% extends "layoutadm.twig" %}
 
 {% block icon %}
-    <link rel="icon" type="image/png" href="../../../imagenes/icon.png" />
+    <link rel="icon" type="image/png" href="../../../imagenes/l3.png" />
 {% endblock %}
 
 {% block css %}
     <link rel="stylesheet" type="text/css" href="../../../css/bootstrap2.css">
     <style>
-        h2{
+        body{
+            background-image: url("../../../imagenes/backadm.jpg");
+
+        }
+        .l3{
+            height: 10em;
+            width: 10em;
+        }
+        h1,h2{
             text-align: center;
         }
     </style>
 {% endblock %}
 
 {% block imgnav %}
-    <img src="../../../imagenes/cf.png" class="img-fluid" alt="Responsive image">
+    <img src="../../../imagenes/l3.png" class="img-fluid l3" alt="Responsive image">
 {% endblock %}
 {% block content %}
     <div class="flex-center position-ref full-height">
         {% if result %}
             <div class="alert alert-success">Curso Cargado!</div>
         {% endif %}
-        <div class="container col-md-10 ">
+        <div class="container col-md-12 ">
                 <section class="container">
                     <h1>Proximamente</h1>
                 </section>
             <br>
         </div>
     </div>
+{% endblock %}
+{% block js %}
+    <script src="../../../jss/jquery.js"></script>
 {% endblock %}

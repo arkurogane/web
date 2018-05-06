@@ -1,24 +1,38 @@
 {% extends "layoutadm.twig" %}
 
 {% block icon %}
-        <link rel="icon" type="image/png" href="../../../imagenes/icon.png" />
+    <link rel="icon" type="image/png" href="../../../imagenes/l3.png" />
 {% endblock %}
 
 {% block css %}
     <link rel="stylesheet" type="text/css" href="../../../css/bootstrap2.css">
+    <style>
+        body{
+            background-image: url("../../../imagenes/backadm.jpg");
+
+        }
+        .l3{
+            height: 10em;
+            width: 10em;
+        }
+        h1,h2{
+            text-align: center;
+        }
+    </style>
 {% endblock %}
 
 {% block imgnav %}
-<img src="../../../imagenes/cf.png" class="img-fluid" alt="Responsive image">
+    <img src="../../../imagenes/l3.png" class="img-fluid l3" alt="Responsive image">
 {% endblock %}
 {% block content %}
     <div class="flex-center position-ref full-height">
         {% if result %}
             <div class="alert alert-success">Profesor Registrado!</div>
         {% endif %}
-        <div class="container col-md-10 ">
+        <div class="container col-md-12 ">
             <form method="post">
                 <section class="container">
+                    <h1>Registro de Profesores</h1>
                     <div class="row col-md-12">
                         <div class="col-md-6">
                             <label for="run">RUN Docente</label>
@@ -44,22 +58,23 @@
                             <br>
                         </div>
                     </div>
-                <div class="row col-md-12">
-                    <div class="col-md-4"></div>
-                    <div class="col-md-4">
-                        <br>
-                        <button class="btn btn-primary btn-block" id="cargar">Cargar</button>
+                    <div class="row col-md-12">
+                        <div class="col-md-4"></div>
+                        <div class="col-md-4">
+                            <br>
+                            <button class="btn btn-primary btn-block" id="cargar">Cargar</button>
+                        </div>
+                        <div class="col-md-4"></div>
                     </div>
-                    <div class="col-md-4"></div>
-                </div>
-                <br>
+                    <br>
                 </section>
             </form>
+            <br>
             <form method="post">
                 <section class="container">
                     <table class="table table-striped">
                         <br>
-                        <h2>Cursos Registrados</h2>
+                        <h2>Docentes Registrados</h2>
                         <br>
                         <thead class="thead-dark">
                         <tr>
@@ -86,7 +101,11 @@
                         </tbody>
                     </table>
                 </section>
+                <br>
             </form>
         </div>
     </div>
+{% endblock %}
+{% block js %}
+    <script src="../../../jss/jquery.js"></script>
 {% endblock %}

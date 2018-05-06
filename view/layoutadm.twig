@@ -3,9 +3,8 @@
 <head>
     <meta charset="UTF-8">
     {% block icon %}
-        <link rel="icon" type="image/png" href="../../imagenes/icon.png" />
+        <link rel="icon" type="image/png" href="../../imagenes/l3.png" />
     {% endblock %}
-    <link rel="icon" type="image/png" href="../../imagenes/icon.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="../../css/bootstrap2.css" integrity="sha384-Zug+QiDoJOrZ5t4lssLdxGhVrurbmBWopoEl+M6BdEfwnCJZtKxi1KgxUyJq13dy" crossorigin="anonymous">
     <title>Conciencia Fonologica</title>
@@ -41,9 +40,7 @@
         img{
             height: 10em;
             width: 15em;
-
         }
-
     </style>
     <style rel="stylesheet">
         SECTION {
@@ -60,18 +57,20 @@
             width: 4em;
             text-align: center;
         }
-        .ncolor{
-            color:#000;
-            text-decoration:none;
-            padding:0.8em;
-        }
-        .ncolor:hover{
-            color:#000;
-            text-decoration:none;
-        }
         .nav-link{
             color:#000;
 
+        }
+        section{
+            border-radius: 2em;
+        }
+    </style>
+    <style>
+        .btn-primary {
+            border-radius: 5em;
+            margin-right: 2em;
+            margin-left: 1.2em;
+            background-color: #084B8A;
         }
     </style>
 </head>
@@ -80,29 +79,28 @@
     {% block imgnav %}
         <img src="../imagenes/cf.png" class="img-fluid" alt="Responsive image">
     {% endblock %}
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
     </button>
-    <div class="collapse navbar-collapse" id="navbarNavDropdown">
-        <ul class="navbar-nav">
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
             <li class="nav-item">
-                <a class="nav-link" href="{{ 'admin/index' | url }}">Inicio</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="{{ 'admin/admin/datos' | url }}">Mis Datos</a>
+                <a class="nav-link btn btn-primary btn-block" href="{{ 'admin/index' | url }}">Inicio</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="{{ 'admin/admin/registro' | url }}">Registro Profesores</a>
-            </li>
-            <li class="nav-item dropdown">
-                <a class="nav-link" href="{{ 'admin/admin/registro_curso' | url }}">Registro Cursos</a>
+                <a class="nav-link btn btn-primary btn-block" href="{{ 'admin/admin/datos' | url }}">Mis Datos</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="{{ 'admin/admin/actividades' | url }}">Actividades</a>
+                <a class="nav-link btn btn-primary btn-block" href="{{ 'admin/admin/registro' | url }}">Registro Profesores</a>
             </li>
-            <li class="nav-item"><a class="nav-link" href="{{ 'auth/logout' | url }}">Cerrar Sesion</a></li>
+            <li class="nav-item">
+                <a class="nav-link btn btn-primary btn-block" href="{{ 'admin/admin/registro_curso' | url }}">Registro Cursos</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link btn btn-primary btn-block" href="{{ 'admin/admin/actividades' | url }}">Actividades</a>
+            </li>
+            <li class="nav-item"><a class="nav-link btn btn-primary btn-block" href="{{ 'auth/logout' | url }}">Cerrar Sesion</a></li>
         </ul>
-
     </div>
 </nav>
 <div class="container">

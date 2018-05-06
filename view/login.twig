@@ -8,7 +8,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Conciencia Fonologica</title>
     <link rel="stylesheet" type="text/css" href="../css/bootstrap2.css">
+    <script src="../../jss/jquery.js"></script>
     <style>
+        body{
+            background-image: url("../../imagenes/backlog.jpg");
+        }
         nav div ul li a {
             color: #effff8;
             font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -59,30 +63,34 @@
     </style>
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg navbar-dark">
-        <img src="../../imagenes/l3.png" class="img-fluid l3" alt="Responsive image">
-        <div class="rig row" id="navbarNavDropdown">
-            <div class="col-md-12 row">
-                <div class="col-md-6">&nbsp;&nbsp;&nbsp;&nbsp;</div>
-                <div class="col-md-6">
-                    <a class="btn btn-success" href="{{ 'index' | url }}"><img class="home rig" src="../../imagenes/home.png"> </a>
-                </div>
+<nav class="navbar navbar-expand-lg navbar-dark">
+    <img src="../../imagenes/l3.png" class="img-fluid l3" alt="Responsive image">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse rig row" id="navbarSupportedContent">
+        <form class="form-inline my-2 my-lg-0">
+        </form>
+        <div class="col-md-12 row">
+            <div class="col-md-6">&nbsp;&nbsp;&nbsp;&nbsp;</div>
+            <div class="col-md-6">
+                <a class="btn btn-success" href="{{ 'index' | url }}"><img class="home rig" src="../../imagenes/home.png"> </a>
             </div>
         </div>
-    </nav>
+    </div>
+</nav>
     <div class="container">
         <div class="row">
             <div class="col-md-3"></div>
             <div class="col-md-6">
                 <h2>Ingresar</h2>
                 <form method="post">
+                    <br>
                     <div class="form-group">
-                        <label for="correo">Email</label>
-                        <input type="text" class="form-control" name="correo" id="correo">
+                        <input type="text" class="form-control" placeholder="Email" name="correo" id="correo">
                     </div>
                     <div class="form-group">
-                        <label for="inputPassword">Password</label>
-                        <input type="Password" class="form-control" name="password" id="inputPassword">
+                        <input type="Password" class="form-control" placeholder="Password" name="password" id="inputPassword">
                     </div>
                     <div class="form-group">
                         <input type="submit" class="btn btn-primary btn-block" value="Login">

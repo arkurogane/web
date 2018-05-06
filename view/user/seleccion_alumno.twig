@@ -38,7 +38,7 @@
                     {% for alumno in alumno %}
                             <div class="col-md-4">
                             <br>
-                                <a href="{{ 'user/actividad/actividad' | url }}" target="_blank" onclick="window.open(this.href, this.target, 'width=300,height=400'); return false;"><img src="../../../imagenes/{{ alumno.imagen }}" class="img-fluid ig" alt="Responsive image"></a>
+                                <a href="{{ 'user/actividad/actividad' | url }}" target="_blank" onclick="FullScreen(window.open({{ 'user/actividad/actividad' | url }}, this.target, 'fullscreen=yes, scrollbars=auto')); return false;"><img src="../../../imagenes/{{ alumno.imagen }}" class="img-fluid ig" alt="Responsive image"></a>
                                 <br>
                                 <label>{{ alumno.nombre }}</label>
                             </div>
@@ -48,4 +48,7 @@
             </form>
         </div>
     </div>
+{% endblock %}
+{% block js %}
+    <script src="../../../jss/jquery.js"></script>
 {% endblock %}

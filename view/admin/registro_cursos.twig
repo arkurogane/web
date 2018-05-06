@@ -1,27 +1,35 @@
 {% extends "layoutadm.twig" %}
 
 {% block icon %}
-    <link rel="icon" type="image/png" href="../../../imagenes/icon.png" />
+    <link rel="icon" type="image/png" href="../../../imagenes/l3.png" />
 {% endblock %}
 
 {% block css %}
     <link rel="stylesheet" type="text/css" href="../../../css/bootstrap2.css">
     <style>
-        h2{
+        body{
+            background-image: url("../../../imagenes/backadm.jpg");
+
+        }
+        .l3{
+            height: 10em;
+            width: 10em;
+        }
+        h1,h2{
             text-align: center;
         }
     </style>
 {% endblock %}
 
 {% block imgnav %}
-    <img src="../../../imagenes/cf.png" class="img-fluid" alt="Responsive image">
+    <img src="../../../imagenes/l3.png" class="img-fluid l3" alt="Responsive image">
 {% endblock %}
 {% block content %}
     <div class="flex-center position-ref full-height">
         {% if result %}
             <div class="alert alert-success">Curso Cargado!</div>
         {% endif %}
-        <div class="container col-md-10 ">
+        <div class="container col-md-12">
             <form method="post">
                 <section class="container">
                     <h2>Ingrese Curso</h2>
@@ -39,16 +47,17 @@
                         <div class="col-md-3"></div>
                         <div class="col-md-6">
                             <br>
-              <button class="btn btn-primary btn-block" id="cargar">Cargar</button>
+                            <button class="btn btn-primary btn-block" id="cargar">Cargar</button>
                             <br>
                         </div>
                         <div class="col-md-3"></div>
                     </div>
                 </section>
-                </form>
+            </form>
+            <br>
             <form action="{{ 'admin/admin/eliminar' | url }}" method="post">
                 <section class="container">
-                <div class="row col-md-12">
+                    <div class="row col-md-12">
                         <div class="col-md-3"></div>
                         <div class="col-md-6">
                             <table class="table table-striped">
@@ -69,17 +78,20 @@
                                         <td>{{ curso.nombre }}</td>
                                         <td><a class="btn btn-danger" id="{{ curso.id }}" onclick="return confirm('Desea Eliminar');" href="">Eliminar</a></td>
                                     </tr>
-{% endfor %}
+                                {% endfor %}
 
-</tbody>
-</table>
-</div>
-<div class="col-md-3"></div>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="col-md-3"></div>
 
-</div>
-</section>
-</form>
-<br>
-</div>
-</div>
+                    </div>
+                </section>
+            </form>
+            <br>
+        </div>
+    </div>
+{% endblock %}
+{% block js %}
+    <script src="../../../jss/jquery.js"></script>
 {% endblock %}
