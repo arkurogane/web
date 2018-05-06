@@ -1,0 +1,61 @@
+{% extends "layoutadm.twig" %}
+
+{% block icon %}
+        <link rel="icon" type="image/png" href="../../../imagenes/icon.png" />
+{% endblock %}
+
+{% block css %}
+    <link rel="stylesheet" type="text/css" href="../../../css/bootstrap2.css">
+    <style>
+    .ig{
+        height:14em;
+        width:14em;
+        border-radius: 2em;
+    }
+    </style>
+{% endblock %}
+{% block imgnav %}
+<img src="../../../imagenes/cf.png" class="img-fluid" alt="Responsive image">
+{% endblock %}
+
+{% block content %}
+    <div class="container col-md-7">
+        {% if result %}
+            <div class="alert alert-success">Contraseña actualizada!</div>
+        {% endif %}
+        <form method="post">
+            <section class="container">
+            <div class="row col-md-12">
+            <div class="col-md-6">
+            <label for="rut">RUT</label>
+            <input type="text" name="rut" class="form-control" id="rut" disabled value="{{ adm.id }}">
+            <label for="nombre">Nombre</label>
+            <input type="text" name="nombre" class="form-control" id="nombre" disabled value="{{ adm.nombre }}">
+            <label for="email">Correo</label>
+            <input type="text" name="email" class="form-control" id="email" disabled value="{{ adm.correo }}">
+            <br>
+            </div>
+            <div class="col-md-6">
+            <label for="password">Password Actual</label>
+            <input type="password" name="password" class="form-control" id="password" required>
+            <label for="npassword">Password Nueva</label>
+            <input type="password" name="npassword" minlength="8" class="form-control" id="npassword" required>
+            <label for="cpassword">Confirme Password</label>
+            <input type="password" name="cpassword" minlength="8" class="form-control" id="cpassword" required>
+            </div>
+            </div>
+            
+            
+            <br>
+            <div class="row col-md-12">
+                <div class="col-md-4"></div>
+                <div class="col-md-4">
+                    <input class="btn btn-primary btn-block" type="submit" value="Guardar">
+                </div>
+                <div class="col-md-4"></div>
+            </div>
+            <br>
+            </section>
+        </form>
+    </div>
+{% endblock %}

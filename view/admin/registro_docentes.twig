@@ -1,0 +1,92 @@
+{% extends "layoutadm.twig" %}
+
+{% block icon %}
+        <link rel="icon" type="image/png" href="../../../imagenes/icon.png" />
+{% endblock %}
+
+{% block css %}
+    <link rel="stylesheet" type="text/css" href="../../../css/bootstrap2.css">
+{% endblock %}
+
+{% block imgnav %}
+<img src="../../../imagenes/cf.png" class="img-fluid" alt="Responsive image">
+{% endblock %}
+{% block content %}
+    <div class="flex-center position-ref full-height">
+        {% if result %}
+            <div class="alert alert-success">Profesor Registrado!</div>
+        {% endif %}
+        <div class="container col-md-10 ">
+            <form method="post">
+                <section class="container">
+                    <div class="row col-md-12">
+                        <div class="col-md-6">
+                            <label for="run">RUN Docente</label>
+                            <input type="text" name="run" class="form-control" id="run" required>
+                            <label for="nombre">Nombre</label>
+                            <input type="text" name="nombre" class="form-control" id="nombre" required>
+                            <label for="correo">Correo</label>
+                            <input type="email" name="correo" class="form-control" id="correo" required>
+
+                            <br>
+                        </div>
+                        <div class="col-md-6">
+                            <label for="password">Password</label>
+                            <input type="password" name="password" class="form-control" id="password" required>
+                            <label for="estado">Estado</label>
+                            <select class="form-control" name="estado" id="estado" required>
+                                <option value="#">Seleccione Opción</option>
+                                <option value="1">Activo</option>
+                                <option value="2">Inactivo</option>
+                            </select>
+                            <label for="imagen">Seleccione Imagen</label>
+                            <input type="file" name="imagen" class="form-control-file" id="imagen" required >
+                            <br>
+                        </div>
+                    </div>
+                <div class="row col-md-12">
+                    <div class="col-md-4"></div>
+                    <div class="col-md-4">
+                        <br>
+                        <button class="btn btn-primary btn-block" id="cargar">Cargar</button>
+                    </div>
+                    <div class="col-md-4"></div>
+                </div>
+                <br>
+                </section>
+            </form>
+            <form method="post">
+                <section class="container">
+                    <table class="table table-striped">
+                        <br>
+                        <h2>Cursos Registrados</h2>
+                        <br>
+                        <thead class="thead-dark">
+                        <tr>
+                            <th>Run</th>
+                            <th>Nombre</th>
+                            <th>Correo</th>
+                            <th>Estado</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        {% for profesor in profesor %}
+                            <tr>
+                                <th scope="row">{{ profesor.id }}</th>
+                                <td>{{ profesor.nombre }}</td>
+                                <td>{{ profesor.correo }}</td>
+                                {% if profesor.estado_id==1 %}
+                                    <td>Activo</td>
+                                {% else %}
+                                    <td>Inactivo</td>
+                                {% endif %}
+                            </tr>
+                        {% endfor %}
+
+                        </tbody>
+                    </table>
+                </section>
+            </form>
+        </div>
+    </div>
+{% endblock %}

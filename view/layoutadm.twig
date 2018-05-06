@@ -3,15 +3,17 @@
 <head>
     <meta charset="UTF-8">
     {% block icon %}
-        <link rel="icon" type="image/png" href="../../imagenes/l3.png" />
+        <link rel="icon" type="image/png" href="../../imagenes/icon.png" />
     {% endblock %}
+    <link rel="icon" type="image/png" href="../../imagenes/icon.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="../../css/bootstrap2.css" integrity="sha384-Zug+QiDoJOrZ5t4lssLdxGhVrurbmBWopoEl+M6BdEfwnCJZtKxi1KgxUyJq13dy" crossorigin="anonymous">
     <title>Conciencia Fonologica</title>
     <script src="../../jss/jquery.js"></script>
     <link rel="stylesheet" type="text/css" href="../../../css/bootstrap2.css">
-    
 
+    {% block css %}
+    {% endblock %}
     <style>
         nav div ul li a{
             color: #effff8;
@@ -31,7 +33,7 @@
 
         }
         html body nav {
-            background-color: #088A4B;
+            background-color: #385a8a;
             color:#000;
             text-align: right;
             margin: 0.5em;
@@ -72,59 +74,37 @@
 
         }
     </style>
-    {% block css %}
-        <style>
-            body{
-                background-image: url("../../imagenes/33.jpg");
-
-            }
-
-            .l3{
-                height: 10em;
-                width: 10em;
-            }
-        </style>
-
-
-    {% endblock %}
-    <style>
-        .btn-success{
-            border-radius: 5em;
-            margin: 2em;
-        }
-
-    </style>
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg navbar-dark">
-        {% block imgnav %}
-        <img src="../imagenes/l3.png" class="img-fluid l3" alt="Responsive image">
-        {% endblock %}
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse ncolor" id="navbarNavDropdown">
-            <ul class="navbar-nav">
-                <li class="nav-item">
-                    <a class="nav-link btn btn-success btn-block" href="{{ 'user/index' | url }}">Inicio</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link btn btn-success btn-block" href="{{ 'user/docente/datos' | url }}">Mis Datos</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link btn btn-success btn-block" href="{{ 'user/academico/registro_manual' | url }}">Registro Alumnos</a>
-                </li>
-                <li class="nav-item dropdown">
-                    <a class="nav-link btn btn-success btn-block" href="{{ 'user/academico/lista' | url }}">Selección Alumnos</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link btn btn-success btn-block" href="{{ 'user/actividad/actividad' | url }}">Actividades</a>
-                </li>
-                <li class="nav-item "><a class="nav-link btn btn-success btn-block" href="{{ 'auth/logout' | url }}">Cerrar Sesion</a></li>
-            </ul>
+<nav class="navbar navbar-expand-lg navbar-dark">
+    {% block imgnav %}
+        <img src="../imagenes/cf.png" class="img-fluid" alt="Responsive image">
+    {% endblock %}
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavDropdown">
+        <ul class="navbar-nav">
+            <li class="nav-item">
+                <a class="nav-link" href="{{ 'admin/index' | url }}">Inicio</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="{{ 'admin/admin/datos' | url }}">Mis Datos</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="{{ 'admin/admin/registro' | url }}">Registro Profesores</a>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link" href="{{ 'admin/admin/registro_curso' | url }}">Registro Cursos</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="{{ 'admin/admin/actividades' | url }}">Actividades</a>
+            </li>
+            <li class="nav-item"><a class="nav-link" href="{{ 'auth/logout' | url }}">Cerrar Sesion</a></li>
+        </ul>
 
-        </div>
-    </nav>
+    </div>
+</nav>
 <div class="container">
     <div class="row">
         <div class="col-md-12">

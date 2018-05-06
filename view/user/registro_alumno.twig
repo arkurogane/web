@@ -1,24 +1,38 @@
 {% extends "layout.twig" %}
 
 {% block icon %}
-        <link rel="icon" type="image/png" href="../../../imagenes/icon.png" />
+        <link rel="icon" type="image/png" href="../../../imagenes/l3.png" />
 {% endblock %}
 
 {% block css %}
     <link rel="stylesheet" type="text/css" href="../../../css/bootstrap2.css">
+    <style>
+        body{
+            background-image: url("../../../imagenes/33.jpg");
+
+        }
+        .l3{
+            height: 10em;
+            width: 10em;
+        }
+        h1{
+            text-align: center;
+        }
+    </style>
 {% endblock %}
 
 {% block imgnav %}
-<img src="../../../imagenes/cf.png" class="img-fluid" alt="Responsive image">
+<img src="../../../imagenes/l3.png" class="img-fluid l3" alt="Responsive image">
 {% endblock %}
 {% block content %}
     <div class="flex-center position-ref full-height">
         {% if result %}
             <div class="alert alert-success">Alumno Cargado!</div>
         {% endif %}
-        <div class="container col-md-10 ">
+        <div class="container col-md-12 ">
             <form method="post">
                 <section class="container">
+                    <h1>Registro Alumnos</h1>
                     <div class="row col-md-12">
                         <div class="col-md-6">
                             <label for="curso">Curso</label>
@@ -35,10 +49,8 @@
                             <br>
                         </div>
                         <div class="col-md-6">
-                            <label for="imagen">seleccione imagen</label>
-                            <input type="file" name="imagen" class="form-control" id="imagen" required >
-                           <!-- <img src="<input type='file' name='imagen' class='form-control' id='imagen'>">-->
-                            
+                            <label for="">&nbsp;</label>
+                            <input type="file" name="imagen" class="form-control-file" id="imagen" required >
                             <br>
                         </div>
                     </div>

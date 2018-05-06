@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Controllers\Admin;
+namespace App\Controllers\User;
 
 use App\Controllers\BaseController;
 use App\Models\Profesor;
@@ -18,7 +18,7 @@ class DocenteController extends BaseController
 
             if($docente)
             {
-                return $this->render('admin/index.twig', ['docente'=>$docente]);
+                return $this->render('user/index.twig', ['docente'=>$docente]);
             }
         }
 
@@ -29,7 +29,7 @@ class DocenteController extends BaseController
     public function getLista()
     {
         $docente=Profesor::select('id','nombre','correo')->get();
-        return $this->render('admin/docente.twig',[
+        return $this->render('user/docente.twig',[
             'docente'=>$docente
         ]);
     }
@@ -40,7 +40,7 @@ class DocenteController extends BaseController
 
         $docente=Profesor::find($userId);
 
-        return $this->render('admin/mis_datos.twig', ['docente'=>$docente]);
+        return $this->render('user/mis_datos.twig', ['docente'=>$docente]);
     }
 
     public function postDatos()
@@ -68,7 +68,7 @@ class DocenteController extends BaseController
             $errors=$validator->getMessages();
         }
         
-        return $this->render('admin/mis_datos.twig', [
+        return $this->render('user/mis_datos.twig', [
             'docente'=>$docente,
             'result'=>$result,
             'errors'=>$errors,

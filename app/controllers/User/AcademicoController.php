@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Controllers\Admin;
+namespace App\Controllers\User;
 
 use App\Controllers\BaseController;
 use App\Models\Profesor;
@@ -19,7 +19,7 @@ class AcademicoController extends BaseController
 
             if($docente)
             {
-                return $this->render('admin/index.twig', ['docente'=>$docente]);
+                return $this->render('user/index.twig', ['docente'=>$docente]);
             }
         }
 
@@ -32,7 +32,7 @@ class AcademicoController extends BaseController
 
         $curso=Curso::all();
 
-        return $this->render('admin/registro_alumno.twig',[
+        return $this->render('user/registro_alumno.twig',[
             'curso'=>$curso
         ]);
     }
@@ -65,7 +65,7 @@ class AcademicoController extends BaseController
         }
         $curso=Curso::all();
 
-        return $this->render('admin/registro_alumno.twig',[
+        return $this->render('user/registro_alumno.twig',[
             'result'=>$result,
             'errors'=>$errors,
             'curso'=>$curso
@@ -78,7 +78,7 @@ class AcademicoController extends BaseController
         $userId=$_SESSION['userId'];
             $docente=Profesor::find($userId);
         $alumno=Alumno::all()->where('profesor_id','=',$docente->id);
-        return $this->render('admin/seleccion_alumno.twig',[
+        return $this->render('user/seleccion_alumno.twig',[
             'alumno'=>$alumno
         ]);
     }

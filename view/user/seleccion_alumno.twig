@@ -1,6 +1,6 @@
 {% extends "layout.twig" %}
 {% block icon %}
-        <link rel="icon" type="image/png" href="../../../imagenes/icon.png" />
+        <link rel="icon" type="image/png" href="../../../imagenes/l3.png" />
 {% endblock %}
 
 {% block css %}
@@ -11,10 +11,21 @@
         width:8em;
         border-radius: 2em;
     }
+    body{
+        background-image: url("../../../imagenes/33.jpg");
+
+    }
+    .l3{
+        height: 10em;
+        width: 10em;
+    }
+    h1{
+        text-align: center;
+    }
     </style>
 {% endblock %}
 {% block imgnav %}
-<img src="../../../imagenes/cf.png" class="img-fluid" alt="Responsive image">
+<img src="../../../imagenes/l3.png" class="img-fluid l3" alt="Responsive image">
 {% endblock %}
 
 {% block content %}
@@ -27,12 +38,13 @@
                     {% for alumno in alumno %}
                             <div class="col-md-4">
                             <br>
-                                <a href="{{ 'admin/actividad/actividad' | url }}"><img src="../../../imagenes/{{ alumno.imagen }}" class="img-fluid ig" alt="Responsive image"></a>
+                                <a href="{{ 'user/actividad/actividad' | url }}" target="_blank" onclick="window.open(this.href, this.target, 'width=300,height=400'); return false;"><img src="../../../imagenes/{{ alumno.imagen }}" class="img-fluid ig" alt="Responsive image"></a>
                                 <br>
                                 <label>{{ alumno.nombre }}</label>
                             </div>
                     {% endfor %}
                 </section>
+                <br>
             </form>
         </div>
     </div>

@@ -2,26 +2,37 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<link rel="icon" type="image/png" href="../imagenes/icon.png" />
+	<link rel="icon" type="image/png" href="../imagenes/l3.png" />
 	<title>Conciencia Fonologica</title>
 	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0,minimum-scale=1.0">
     <link rel="stylesheet" type="text/css" href="https://drive.google.com/open?id=13W-aBf0daiYsY58mbO01b3ieVJGx1iyw">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
+	<style>
+		/* Make the image fully responsive */
+		.carousel-inner img {
+			width: 80em;
+			height: 23em;
+		}
+	</style>
 	<link rel="stylesheet" type="text/css" href="../css/estilosweb.css">
 	<link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css">
 	<style>
 	body{
-		background-color:#989BA9;
+		background-image: url("../imagenes/fondo.jpg");
 	}
 	.col{
-		background-color:#385a8a;
+		background-color:#088A4B;
 		border-radius:3em;
 		height:3em;}
 	 b>a{
 		color:#fff;
 	}
 	b>a:Hover{
-		color:#ff00ff;
+		color:#ffff00;
 	}
 	footer{
 		background-color:#385a8a;
@@ -30,6 +41,12 @@
 	.imb{
 		border-radius:1em;
 	}
+	.color2{
+		background-color: #CECEF6;
+	}
+		.color1{
+			background-color: #0B614B;
+		}
 	
 	</style>
 </head>
@@ -39,22 +56,40 @@
   <div class="navbar-header lf">
     <b><a class="navbar-brand" href="{{ 'auth/login' | url }}">Login</a></b>
   </div>
+</div>
 </nav>
 	<div class="container">
-		<br>	
-    <div class="col-md-12">
-    	<div id="carousel-1" class="carousel slide" data-ride="carousel">
+		<div id="demo" class="carousel slide" data-ride="carousel">
 
-    		<div class="carousel-inner" role="listbox">
-    			<div class="item active mg">
-					<img src="../imagenes/32.jpeg" class="img-responsive imb" alt="">
-    				<div class="carousel-caption hidden-xs hidden-sm">
-    					<h3>Aqui sirve para poner un mensaje!</h3>
-    				</div>
-                </div>
-    		</div>
-    	</div>
-    </div>
+			<!-- Indicators -->
+			<ul class="carousel-indicators">
+				<li data-target="#demo" data-slide-to="0" class="active"></li>
+				<li data-target="#demo" data-slide-to="1"></li>
+				<li data-target="#demo" data-slide-to="2"></li>
+			</ul>
+
+			<!-- The slideshow -->
+			<div class="carousel-inner">
+				<div class="carousel-item active">
+					<img src="../imagenes/1-s.jpg" alt="Los Angeles" width="1100" height="500">
+				</div>
+				<div class="carousel-item">
+					<img src="../imagenes/2-s.jpg" alt="Chicago" width="1100" height="500">
+				</div>
+				<div class="carousel-item">
+					<img src="../imagenes/32.jpeg" alt="New York" width="1100" height="500">
+				</div>
+			</div>
+
+			<!-- Left and right controls -->
+			<a class="carousel-control-prev" href="#demo" data-slide="prev">
+				<span class="carousel-control-prev-icon"></span>
+			</a>
+			<a class="carousel-control-next" href="#demo" data-slide="next">
+				<span class="carousel-control-next-icon"></span>
+			</a>
+		</div>
+		<br>
 </div>
 </header>
 <div class="container">
@@ -63,9 +98,9 @@
 
 			<div role="tabpanel">
 				<ul class="nav nav-tabs" role="tablist">
-					<li role="presentation"><a href="#seccion1" class="btn btn-default" aria-controls="seccion1" data-toggle="tab" role="tab">Quienes Somos</a></li>
-					<li role="presentation"><a href="#seccion2" class="btn btn-default" aria-controls="seccion2" data-toggle="tab" role="tab">El Porque de esta plataforma</a></li>
-					<li role="presentation"><a href="#seccion3" class="btn btn-default" aria-controls="seccion3" data-toggle="tab" role="tab">Acerca de las Actividades</a></li>
+						<li role="presentation"><a href="#seccion1" class="btn btn-success" aria-controls="seccion1" data-toggle="tab" role="tab">Quienes Somos</a></li>
+						<li role="presentation"><a href="#seccion2" class="btn btn-warning" aria-controls="seccion2" data-toggle="tab" role="tab">El Porque de esta plataforma</a></li>
+						<li role="presentation"><a href="#seccion3" class="btn btn-dark" aria-controls="seccion3" data-toggle="tab" role="tab">Acerca de las Actividades</a></li>
 				</ul>
 
 				<div class="tab-content">
@@ -100,7 +135,7 @@
 				quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
 			</p>
 		</div>
-		<div class="col-xs-12 col-sm-6 col-md-4">
+		<div class="color2 col-xs-12 col-sm-6 col-md-4 imb">
 			<h3>Información</h3>
 			<p>
 				Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod

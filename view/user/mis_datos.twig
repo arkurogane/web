@@ -1,7 +1,7 @@
 {% extends "layout.twig" %}
 
 {% block icon %}
-        <link rel="icon" type="image/png" href="../../../imagenes/icon.png" />
+        <link rel="icon" type="image/png" href="../../../imagenes/l3.png" />
 {% endblock %}
 
 {% block css %}
@@ -12,19 +12,31 @@
         width:14em;
         border-radius: 2em;
     }
+    body{
+        background-image: url("../../../imagenes/33.jpg");
+
+    }
+    .l3{
+        height: 10em;
+        width: 10em;
+    }
+    h1{
+        text-align: center;
+    }
     </style>
 {% endblock %}
 {% block imgnav %}
-<img src="../../../imagenes/cf.png" class="img-fluid" alt="Responsive image">
+<img src="../../../imagenes/l3.png" class="img-fluid l3" alt="Responsive image">
 {% endblock %}
 
 {% block content %}
-    <div class="container col-md-7">
+    <div class="container col-md-12">
         {% if result %}
             <div class="alert alert-success">Contraseña actualizada!</div>
         {% endif %}
         <form method="post">
             <section class="container">
+                <h1>Mis Datos</h1>
             <div class="row col-md-12">
             <div class="col-md-6">
             <label for="rut">RUT</label>

@@ -2,7 +2,6 @@
 
 namespace App\controllers;
 
-use App\Models\BlogPost;
 
 class IndexController extends BaseController
 {

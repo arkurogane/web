@@ -51,10 +51,12 @@ $router->filter('auth', function (){
 
 $router->controller('/auth', App\Controllers\AuthController::class);
 $router->group(['before'=>'auth'], function ($router){
+$router->controller('/user', App\Controllers\User\IndexController::class);
 $router->controller('/admin', App\Controllers\Admin\IndexController::class);
-$router->controller('admin/docente',App\Controllers\Admin\DocenteController::class);
-$router->controller('admin/academico',App\Controllers\Admin\AcademicoController::class);
-$router->controller('admin/actividad',App\Controllers\Admin\ActividadController::class);
+$router->controller('user/docente',App\Controllers\User\DocenteController::class);
+$router->controller('user/academico',App\Controllers\User\AcademicoController::class);
+$router->controller('user/actividad',App\Controllers\User\ActividadController::class);
+$router->controller('admin/admin',App\Controllers\Admin\AdminController::class);
 });
 $router->controller('/', App\Controllers\IndexController::class);
 

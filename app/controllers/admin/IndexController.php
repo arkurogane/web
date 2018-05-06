@@ -4,7 +4,7 @@ namespace App\Controllers\Admin;
 
 
 use App\Controllers\BaseController;
-use App\Models\Profesor;
+use App\Models\Admin;
 
 class IndexController extends BaseController
 {
@@ -13,11 +13,11 @@ class IndexController extends BaseController
         if (isset($_SESSION['userId']))
         {
             $userId=$_SESSION['userId'];
-            $docente=Profesor::find($userId);
+            $adm=Admin::find($userId);
 
-            if($docente)
+            if($adm)
             {
-                return $this->render('admin/index.twig', ['docente'=>$docente]);
+                return $this->render('admin/Index.twig', ['adm'=>$adm]);
             }
         }
 

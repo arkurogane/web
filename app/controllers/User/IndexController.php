@@ -1,13 +1,12 @@
 <?php
 
-namespace App\Controllers\Admin;
+namespace App\Controllers\User;
 
 
 use App\Controllers\BaseController;
 use App\Models\Profesor;
-use Sirius\Validation\Validator;
 
-class ActividadController extends BaseController
+class IndexController extends BaseController
 {
     public function getIndex()
     {
@@ -18,7 +17,7 @@ class ActividadController extends BaseController
 
             if($docente)
             {
-                return $this->render('admin/index.twig', ['docente'=>$docente]);
+                return $this->render('user/index.twig', ['docente'=>$docente]);
             }
         }
 
@@ -26,8 +25,4 @@ class ActividadController extends BaseController
 
     }
 
-    public function getActividad()
-    {
-        return $this->render('admin/seleccion_actividad.twig',[]);
-    }
 }

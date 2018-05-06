@@ -1,0 +1,33 @@
+{% extends "layout.twig" %}
+
+{% block css %}
+    <link rel="stylesheet" type="text/css" href="../../css/bootstrap2.css">
+    <style>
+        body{
+            background-image: url("../../imagenes/33.jpg");
+
+        }
+        .l3{
+            height: 10em;
+            width: 10em;
+        }
+        h1,p{
+            text-align: center;
+        }
+    </style>
+{% endblock %}
+
+{% block imgnav %}
+<img src="../../imagenes/l3.png" class="img-fluid l3" alt="Responsive image">
+{% endblock %}
+
+{% block content %}
+    <div class="container col-md-12">
+        <section class="container">
+            <h1>Inicio</h1>
+            <p>
+                Bienvenido {{ docente.nombre }}
+            </p>
+        </section>
+    </div>
+{% endblock %}
