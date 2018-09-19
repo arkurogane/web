@@ -11,44 +11,8 @@
     <script src="../../jss/jquery.js"></script>
     <link rel="stylesheet" type="text/css" href="../../../css/bootstrap2.css">
 
-
-    <style>
-        nav div ul li a{
-            color: #effff8;
-            font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-            margin: 0.5em 1.7em;
-            padding: 0.3em;
-        }
-        nav{
-            background-color: #FFC90E;
-            border-radius: 0.5em;
-        }
-        nav div ul li div a{
-            color: #385a8a;
-            font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-            padding: 0.5em 1em;
-            margin: 0.5em 0.1em;
-
-        }
-        html body nav {
-            background-color: #088A4B;
-            color:#000;
-            text-align: right;
-            margin: 0.5em;
-        }
-        img{
-            height: 10em;
-            width: 15em;
-
-        }
-
-    </style>
     <style rel="stylesheet">
-        SECTION {
-            padding: 0.3em;
-            background-color: #f0f0f0;
-            overflow: auto;
-        }
+
         SECTION > DIV {
             float: left;
             padding: 0.3em;
@@ -58,19 +22,6 @@
             width: 4em;
             text-align: center;
         }
-        .ncolor{
-            color:#000;
-            text-decoration:none;
-            padding:0.8em;
-        }
-        .ncolor:hover{
-            color:#000;
-            text-decoration:none;
-        }
-        .nav-link{
-            color:#000;
-
-        }
     </style>
     <link rel="stylesheet" type="text/css" href="../../../css/bootstrap2.css">
     <style>
@@ -79,72 +30,62 @@
             width:14em;
             border-radius: 2em;
         }
-        body{
-            background-image: url("../../../imagenes/33.jpg");
-
+        SECTION {
+            padding: 0.3em;
+            background-color: rgba(255,255,255,0.5);
+            overflow: auto;
         }
-        .l3{
-            height: 10em;
-            width: 10em;
+        body{
+            background-image: url("../../../imagenes/back3.jpg");
+
         }
         h1{
             text-align: center;
         }
-    </style>
-    <style>
-        .btn-success{
-            border-radius: 5em;
-            margin: 3em;
-        }
+        .container{
+            margin-top: 1em;
+            margin-left: 3em;
+            border-radius: 3em;
 
+        }
+        a{
+            margin:4em 5em;
+        }
     </style>
 </head>
 <body>
 <div class="container">
     <div class="row">
-        <div class="col-md-12">
-            <div class="flex-center position-ref full-height">
-                <div class="container col-md-12 row">
-                    <form action="">
+        <div class="container col-md-12 row">
+            <form action="">
+                <br>
+                <section class="container">
+                    <h1>Actividades</h1>
+                    <br>
+                    <br>
+                    <br>
+                    <div class="col-md-12"></div>
+                    <div class="col-md-1"></div>
+                    <div class="col-md-4">
+                        <a href="../../../juegos/CERDITO/c1/index.html" target="_blank" onclick="FullScreen(window.open( '../../../juegos/CERDITO/cerdito_parte1/index.html', this.target, 'fullscreen=yes, scrollbars=auto')); return false;">
+                            <img src="../../../imagenes//cerdo.png" class="img-fluid ig" alt="Responsive image">
+                        </a>
                         <br>
-                        <section class="container">
-                            <h1>Actividades</h1>
-                            <div class="col-md-12"></div>
-                            <div class="col-md-4">
-                                <img src="../../../imagenes/tr.jpg" class="img-fluid ig" alt="Responsive image">
-                                <br>
-                                <label>Actividad 1</label>
-                            </div>
-                            <div class="col-md-4">
-                                <img src="../../../imagenes/tr.jpg" class="img-fluid ig" alt="Responsive image">
-                                <br>
-                                <label>Actividad 2</label>
-                            </div>
-                            <div class="col-md-4">
-                                <img src="../../../imagenes/tr.jpg" class="img-fluid ig" alt="Responsive image">
-                                <br>
-                                <label>Actividad 3</label>
-                            </div>
-                            <div class="col-md-4">
-                                <img src="../../../imagenes/tr.jpg" class="img-fluid ig" alt="Responsive image">
-                                <br>
-                                <label>Actividad 4</label>
-                            </div>
-                            <div class="col-md-4">
-                                <img src="../../../imagenes/tr.jpg" class="img-fluid ig" alt="Responsive image">
-                                <br>
-                                <label>Actividad 5</label>
-                            </div>
-                            <div class="col-md-4">
-                                <img src="../../../imagenes/tr.jpg" class="img-fluid ig" alt="Responsive image">
-                                <br>
-                                <label>Actividad 6</label>
-                            </div>
-                            <!--<a href="{{ 'user/academico/lista' | url }}">Anterior</a>-->
-                        </section>
-                    </form>
-                </div>
-            </div>
+                        <label><h3>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Juego Silabas</h3></label>
+                    </div>
+                    <div class="col-md-1"></div>
+                    <div class="col-md-4">
+                        <a href="../../../juegos/TIGRE/a1/index.html" target="_blank" onclick="FullScreen(window.open( '../../../juegos/TIGRE/a1/index.html', this.target, 'fullscreen=yes, scrollbars=auto')); return false;">
+                            <img src="../../../imagenes//tigre.png" class="img-fluid ig" alt="Responsive image">
+                        </a>
+
+                        <br>
+                        <label><h3>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Juego Audios</h3></label>
+                    </div>
+                    <div class="col-md-2"></div>
+
+                </section>
+            </form>
         </div>
     </div>
 </div>

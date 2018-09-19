@@ -8,7 +8,7 @@
     <link rel="stylesheet" type="text/css" href="../../../css/bootstrap2.css">
     <style>
         body{
-            background-image: url("../../../imagenes/backadm.jpg");
+            background-image: url("../../../imagenes/back4.jpg");
 
         }
         .l3{
@@ -37,8 +37,8 @@
 
                         <div class="col-md-3"></div>
                         <div class="col-md-6">
-                            <label for="nombre">Nombre</label>
-                            <input type="text" name="nombre" class="form-control" id="nombre" required>
+
+                            <input type="text" name="nombre" placeholder="Nombre" class="form-control" id="nombre" required>
                             <br>
                         </div>
                         <div class="col-md-3"></div>
@@ -58,8 +58,8 @@
             <form action="{{ 'admin/admin/eliminar' | url }}" method="post">
                 <section class="container">
                     <div class="row col-md-12">
-                        <div class="col-md-3"></div>
-                        <div class="col-md-6">
+                        <div class="col-md-4"></div>
+                        <div class="col-md-4">
                             <table class="table table-striped">
                                 <br>
                                 <h2>Cursos Registrados</h2>
@@ -68,22 +68,19 @@
                                 <tr>
                                     <th>ID</th>
                                     <th>Curso</th>
-                                    <th>Acción</th>
                                 </tr>
                                 </thead>
                                 <tbody>
                                 {% for curso in curso %}
                                     <tr>
                                         <th scope="row">{{ curso.id }}</th>
-                                        <td>{{ curso.nombre }}</td>
-                                        <td><a class="btn btn-danger" id="{{ curso.id }}" onclick="return confirm('Desea Eliminar');" href="">Eliminar</a></td>
+                                        <th>{{ curso.nombre }}</th>
                                     </tr>
                                 {% endfor %}
-
                                 </tbody>
                             </table>
                         </div>
-                        <div class="col-md-3"></div>
+                        <div class="col-md-4"></div>
 
                     </div>
                 </section>

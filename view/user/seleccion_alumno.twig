@@ -7,12 +7,12 @@
     <link rel="stylesheet" type="text/css" href="../../../css/bootstrap2.css">
      <style>
     .ig{
-        height:8em;
-        width:8em;
+        height:12em;
+        width:12em;
         border-radius: 2em;
     }
     body{
-        background-image: url("../../../imagenes/33.jpg");
+        background-image: url("../../../imagenes/back3.jpg");
 
     }
     .l3{
@@ -40,7 +40,7 @@
                             <br>
                                 <a href="{{ 'user/actividad/actividad' | url }}" target="_blank" onclick="FullScreen(window.open({{ 'user/actividad/actividad' | url }}, this.target, 'fullscreen=yes, scrollbars=auto')); return false;"><img src="../../../imagenes/{{ alumno.imagen }}" class="img-fluid ig" alt="Responsive image"></a>
                                 <br>
-                                <label>{{ alumno.nombre }}</label>
+                                <h2>{{ alumno.nombre }}</h2>
                             </div>
                     {% endfor %}
                 </section>

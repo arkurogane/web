@@ -13,7 +13,7 @@
         border-radius: 2em;
     }
     body{
-        background-image: url("../../../imagenes/33.jpg");
+        background-image: url("../../../imagenes/back3.jpg");
 
     }
     .l3{
@@ -39,22 +39,21 @@
                 <h1>Mis Datos</h1>
             <div class="row col-md-12">
             <div class="col-md-6">
-            <label for="rut">RUT</label>
-            <input type="text" name="rut" class="form-control" id="rut" disabled value="{{ docente.id }}">
-            <label for="nombre">Nombre</label>
-            <input type="text" name="nombre" class="form-control" id="nombre" disabled value="{{ docente.nombre }}">
-            <label for="email">Correo</label>
-            <input type="text" name="email" class="form-control" id="email" disabled value="{{ docente.correo }}">
+                <br>
+            <input type="text" name="rut" placeholder="RUT" class="form-control" id="rut" disabled value="{{ docente.id }}">
+                <br>
+            <input type="text" name="nombre" placeholder="Nombre" class="form-control" id="nombre" disabled value="{{ docente.nombre }}">
+                <br>
+            <input type="text" name="email" placeholder="Email" class="form-control" id="email" disabled value="{{ docente.correo }}">
             <br>
-            <!--<img src="{{ docente.imagen }}" height="400" width="400" class="img-fluid ig" alt="Responsive image">-->
             </div>
             <div class="col-md-6">
-            <label for="password">Password Actual</label>
-            <input type="password" name="password" class="form-control" id="password" required>
-            <label for="npassword">Password Nueva</label>
-            <input type="password" name="npassword" minlength="8" class="form-control" id="npassword" required>
-            <label for="cpassword">Confirme Password</label>
-            <input type="password" name="cpassword" minlength="8" class="form-control" id="cpassword" required>
+            <br>
+            <input type="password" placeholder="Password Actual" name="password" class="form-control" id="password" required>
+                <br>
+            <input type="password" placeholder="Password Nueva" name="npassword" minlength="8" class="form-control" id="npassword" required>
+                <br>
+            <input type="password" placeholder="Confirme Password" name="cpassword" minlength="8" class="form-control" id="cpassword" required>
             </div>
             </div>
             

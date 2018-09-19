@@ -8,7 +8,7 @@
     <link rel="stylesheet" type="text/css" href="../../../css/bootstrap2.css">
     <style>
         body{
-            background-image: url("../../../imagenes/33.jpg");
+            background-image: url("../../../imagenes/back3.jpg");
 
         }
         .l3{
@@ -35,17 +35,17 @@
                     <h1>Registro Alumnos</h1>
                     <div class="row col-md-12">
                         <div class="col-md-6">
-                            <label for="curso">Curso</label>
+                            <br>
                             <select name="curso" id="curso" class="form-control" required>
                                 <option value="">Seleccione un curso</option>
                                 {% for curso in curso %}
                                     <option name="curso" id="{{ curso.id }}" value="{{ curso.id }}">{{ curso.nombre }}</option>
                                 {% endfor %}
                             </select>
-                            <label for="run">RUN Alumno</label>
-                            <input type="text" name="run" class="form-control" id="run" required>
-                            <label for="nombre">Nombre</label>
-                            <input type="text" name="nombre" class="form-control" id="nombre" required>
+                            <br>
+                            <input type="text" placeholder="RUT Alumno" name="run" class="form-control" id="run" required>
+                            <br>
+                            <input type="text" placeholder="Nombre" name="nombre" class="form-control" id="nombre" required>
                             <br>
                         </div>
                         <div class="col-md-6">

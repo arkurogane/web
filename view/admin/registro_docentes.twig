@@ -8,7 +8,7 @@
     <link rel="stylesheet" type="text/css" href="../../../css/bootstrap2.css">
     <style>
         body{
-            background-image: url("../../../imagenes/backadm.jpg");
+            background-image: url("../../../imagenes/back4.jpg");
 
         }
         .l3{
@@ -35,26 +35,23 @@
                     <h1>Registro de Profesores</h1>
                     <div class="row col-md-12">
                         <div class="col-md-6">
-                            <label for="run">RUN Docente</label>
-                            <input type="text" name="run" class="form-control" id="run" required>
-                            <label for="nombre">Nombre</label>
-                            <input type="text" name="nombre" class="form-control" id="nombre" required>
-                            <label for="correo">Correo</label>
-                            <input type="email" name="correo" class="form-control" id="correo" required>
-
+                            <br>
+                            <input type="text" name="run" placeholder="RUT Docente" class="form-control" id="run" required>
+                            <br>
+                            <input type="text" name="nombre" placeholder="Nombre" class="form-control" id="nombre" required>
+                            <br>
+                            <input type="email" name="correo" placeholder="Correo" class="form-control" id="correo" required>
                             <br>
                         </div>
                         <div class="col-md-6">
-                            <label for="password">Password</label>
-                            <input type="password" name="password" class="form-control" id="password" required>
-                            <label for="estado">Estado</label>
-                            <select class="form-control" name="estado" id="estado" required>
-                                <option value="#">Seleccione Opción</option>
+                            <br>
+                            <input type="password" name="password" placeholder="Password" class="form-control" id="password" required>
+                            <br>
+                            <select class="form-control"  name="estado" id="estado" required>
+                                <option value="#">Seleccione Estado</option>
                                 <option value="1">Activo</option>
                                 <option value="2">Inactivo</option>
                             </select>
-                            <label for="imagen">Seleccione Imagen</label>
-                            <input type="file" name="imagen" class="form-control-file" id="imagen" required >
                             <br>
                         </div>
                     </div>
@@ -88,12 +85,12 @@
                         {% for profesor in profesor %}
                             <tr>
                                 <th scope="row">{{ profesor.id }}</th>
-                                <td>{{ profesor.nombre }}</td>
-                                <td>{{ profesor.correo }}</td>
+                                <th>{{ profesor.nombre }}</th>
+                                <th>{{ profesor.correo }}</th>
                                 {% if profesor.estado_id==1 %}
-                                    <td>Activo</td>
+                                    <th>Activo</th>
                                 {% else %}
-                                    <td>Inactivo</td>
+                                    <th>Inactivo</th>
                                 {% endif %}
                             </tr>
                         {% endfor %}

@@ -8,7 +8,7 @@
     <link rel="stylesheet" type="text/css" href="../../../css/bootstrap2.css">
     <style>
         body{
-            background-image: url("../../../imagenes/backadm.jpg");
+            background-image: url("../../../imagenes/back4.jpg");
 
         }
         .l3{
@@ -34,21 +34,21 @@
                 <h1>Datos Administrador</h1>
             <div class="row col-md-12">
             <div class="col-md-6">
-            <label for="rut">RUT</label>
+                <br>
             <input type="text" name="rut" class="form-control" id="rut" disabled value="{{ adm.id }}">
-            <label for="nombre">Nombre</label>
+                <br>
             <input type="text" name="nombre" class="form-control" id="nombre" disabled value="{{ adm.nombre }}">
-            <label for="email">Correo</label>
+                <br>
             <input type="text" name="email" class="form-control" id="email" disabled value="{{ adm.correo }}">
             <br>
             </div>
             <div class="col-md-6">
-            <label for="password">Password Actual</label>
-            <input type="password" name="password" class="form-control" id="password" required>
-            <label for="npassword">Password Nueva</label>
-            <input type="password" name="npassword" minlength="8" class="form-control" id="npassword" required>
-            <label for="cpassword">Confirme Password</label>
-            <input type="password" name="cpassword" minlength="8" class="form-control" id="cpassword" required>
+                <br>
+            <input type="password" placeholder="Password Actual" name="password" class="form-control" id="password" required>
+                <br>
+            <input type="password" placeholder="Password Nueva" name="npassword" minlength="8" class="form-control" id="npassword" required>
+                <br>
+            <input type="password" placeholder="Confirme Password" name="cpassword" minlength="8" class="form-control" id="cpassword" required>
             </div>
             </div>
             

@@ -20,7 +20,6 @@
             padding: 0.3em;
         }
         nav{
-            background-color: #FFC90E;
             border-radius: 0.5em;
         }
         nav div ul li div a{
@@ -31,7 +30,7 @@
 
         }
         html body nav {
-            background-color: #088A4B;
+            background-color: rgba(255,255,255,0.7);
             color:#000;
             text-align: right;
             margin: 0.5em;
@@ -45,8 +44,9 @@
     </style>
     <style rel="stylesheet">
         SECTION {
+
             padding: 0.3em;
-            background-color: #f0f0f0;
+            background-color: rgba(255,255,255,0.5);
             overflow: auto;
         }
         SECTION > DIV {
@@ -66,7 +66,7 @@
     {% block css %}
         <style>
             body{
-                background-image: url("../../imagenes/33.jpg");
+                background-image: url("../../imagenes/back3.jpg");
 
             }
 
@@ -79,12 +79,12 @@
 
     {% endblock %}
     <style>
-        .btn-success {
+        .btn-info {
             border-radius: 5em;
             margin-right: 2em;
             margin-left: 1em;
             color: #ffffff;
-            background-color: #ca7715;
+            border-color: #ffffff;
         }
         section{
             border-radius: 2em;
@@ -102,21 +102,21 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav mr-auto">
             <li class="nav-item">
-                <a class="nav-link btn btn-success btn-block" href="{{ 'user/index' | url }}"><b>Inicio</b></a>
+                <a class="nav-link btn btn-info btn-block" href="{{ 'user/index' | url }}"><b>Inicio</b></a>
             </li>
             <li class="nav-item">
-                <a class="nav-link btn btn-success btn-block" href="{{ 'user/docente/datos' | url }}">Mis Datos</a>
+                <a class="nav-link btn btn-info btn-block" href="{{ 'user/docente/datos' | url }}"><b>Mis Datos</b></a>
             </li>
             <li class="nav-item">
-                <a class="nav-link btn btn-success btn-block" href="{{ 'user/academico/registro_manual' | url }}">Registro Alumnos</a>
+                <a class="nav-link btn btn-info btn-block" href="{{ 'user/academico/registro_manual' | url }}"><b>Registro Alumnos</b></a>
             </li>
             <li class="nav-item">
-                <a class="nav-link btn btn-success btn-block" href="{{ 'user/academico/lista' | url }}">Selección Alumnos</a>
+                <a class="nav-link btn btn-info btn-block" href="{{ 'user/academico/lista' | url }}"><b>Selección Alumnos</b></a>
             </li>
             <li class="nav-item">
-                <a class="nav-link btn btn-success btn-block" target="_blank" onclick="FullScreen(window.open({{ 'user/actividad/actividad' | url }}, this.target, 'fullscreen=yes, scrollbars=auto')); return false;" href="{{ 'user/actividad/actividad' | url }}">Actividades</a>
+                <a class="nav-link btn btn-info btn-block" target="_blank" onclick="FullScreen(window.open({{ 'user/actividad/actividad' | url }}, this.target, 'fullscreen=yes, scrollbars=auto')); return false;" href="{{ 'user/actividad/actividad' | url }}"><b>Actividades</b></a>
             </li>
-            <li class="nav-item "><a class="nav-link btn btn-success btn-block" href="{{ 'auth/logout' | url }}">Cerrar Sesion</a></li>
+            <li class="nav-item "><a class="nav-link btn btn-info btn-block" href="{{ 'auth/logout' | url }}"><b>Cerrar Sesion</b></a></li>
         </ul>
 
     </div>

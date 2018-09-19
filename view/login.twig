@@ -11,7 +11,7 @@
     <script src="../../jss/jquery.js"></script>
     <style>
         body{
-            background-image: url("../../imagenes/backlog.jpg");
+            background-image: url("../../imagenes/back2.jpg");
         }
         nav div ul li a {
             color: #effff8;
@@ -21,7 +21,7 @@
         }
         
         nav {
-            background-color: #3b3e44;
+
             border-radius: 0.5em;
         }
         
@@ -32,8 +32,15 @@
             margin: 0.5em 0.1em;
         }
         
-        html body nav {
-            background-color: #088A4B;
+        a img {
+            border-radius: 1em;
+            background-color: rgba(255,255,255,0.5);
+            text-align: right;
+            margin: 0.5em;
+        }
+        .container {
+            border-radius: 1em;
+            background-color: rgba(255,255,255,0.5);
             text-align: right;
             margin: 0.5em;
         }
@@ -46,13 +53,6 @@
         h2 {
             text-align: center;
         }
-        .home{
-            height:2em;
-            width:2em;
-        }
-        .rig{
-            float:right;
-        }
         .l3{
             height: 10em;
             width: 10em;
@@ -63,28 +63,23 @@
     </style>
 </head>
 <body>
-<nav class="navbar navbar-expand-lg navbar-dark">
-    <img src="../../imagenes/l3.png" class="img-fluid l3" alt="Responsive image">
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse rig row" id="navbarSupportedContent">
-        <form class="form-inline my-2 my-lg-0">
-        </form>
-        <div class="col-md-12 row">
-            <div class="col-md-6">&nbsp;&nbsp;&nbsp;&nbsp;</div>
-            <div class="col-md-6">
-                <a class="btn btn-success" href="{{ 'index' | url }}"><img class="home rig" src="../../imagenes/home.png"> </a>
-            </div>
-        </div>
+<div class="row">
+    <div class="col-md-5"></div>
+    <div class="col-md-3">
+        <a class="" href="{{ 'index' | url }}"><img src="../../imagenes/l3.png" class="img-fluid l3" alt="Responsive image"></a>
     </div>
-</nav>
-    <div class="container">
+    <div class="col-md-4"></div>
+</div>
+
+<div class="row">
+    <div class="col-md-2"></div>
+    <div class="container col-md-8">
         <div class="row">
             <div class="col-md-3"></div>
             <div class="col-md-6">
-                <h2>Ingresar</h2>
                 <form method="post">
+                    <br>
+                    <br>
                     <br>
                     <div class="form-group">
                         <input type="text" class="form-control" placeholder="Email" name="correo" id="correo">
@@ -100,6 +95,11 @@
             <div class="col-md-3"></div>
         </div>
     </div>
+    <div class="col-md-2"></div>
+
+</div>
+
+
     <script src="https://cdn.jsdelivr.net/sweetalert2/6.4.4/sweetalert2.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/js/bootstrap.min.js" integrity="sha384-a5N7Y/aK3qNeh15eJKGWxsqtnX/wWdSZSKp+81YjTmS15nvnvxKHuzaWwXHDli+4" crossorigin="anonymous"></script>
 </body>
